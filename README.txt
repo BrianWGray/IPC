@@ -8,18 +8,16 @@ This is intended to be installed onto a Raspberry Pi 3, (1GB of RAM and quad cor
 
 To begin the installation .....
 
-Do a fresh image of Raspbian Stretch onto your SDCard.
+Do a fresh image of Raspbian Buster onto your SDCard.
 Boot and configure your RPi ... hostname, WiFi, etc, etc.
 
 Next .....
 
-On your PC:
-- create a temporary directory to work from (NOT c:\temp!)
-- un-Zip the downloaded file into that directory
+sudo apt-get install git
 
 On your RPi:
-- create a new sub-directory on your Raspbery Pi:  mkdir /home/pi/IPC
-- copy all of the un-zipped files from your PC, to that directory on your Raspberry Pi
+- cd /home/pi/
+- git clone https://github.com/BrianWGray/IPC.git
 - at a command prompt, type the following commands:
 	sudo su
 	cd /home/pi/IPC
