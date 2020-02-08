@@ -13,9 +13,8 @@ Boot and configure your RPi ... hostname, WiFi, etc, etc.
 
 Next .....
 
-sudo apt-get install git
-
 On your RPi:
+- sudo apt-get install git
 - cd /home/pi/
 - git clone https://github.com/BrianWGray/IPC.git
 - at a command prompt, type the following commands:
