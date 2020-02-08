@@ -183,6 +183,28 @@ chmod +x /etc/init.d/zram.sh
 update-rc.d zram.sh defaults
 #
 echo;
+
+
+# ------------------------------------------------------------------------------------------------------------------------------------
+# Install PV for piped screen sparkles
+# ------------------------------------------------------------------------------------------------------------------------------------
+HL "Installing PV (Pipe Viewer) ..."
+sudo apt-get install pv > /dev/null
+# Check for errors
+if [ $1 > 0 ]; then 
+	err " Error while installing PV "
+	err " Aborting "
+	ShowTime
+	echo;
+	echo;
+	exit 1
+else
+	HL "No errors during install of PV ... carrying on ..."
+fi
+#
+echo;
+
+
 # ------------------------------------------------------------------------------------------------------------------------------------
 # Install the Network Time Protocol (NTP)
 # ------------------------------------------------------------------------------------------------------------------------------------
@@ -329,7 +351,12 @@ git clone https://github.com/sharkrf/srf-ip-conn-srv | pv > /dev/null 2>&1
 infoNL " ... downloading (2 of 3) ..."
 git clone https://github.com/sharkrf/srf-ip-conn | pv > /dev/null 2>&1 
 infoNL " ... downloading (3 of 3) ..."
-git clone https://github.com/zserge/jsmn | pv > /dev/null 2>&1 
+git clone https://github.com/zserge/jsmn | pv > /dev/null 2>&1
+infoNL " ... checking out specific jsmn version 732d283ee9a2e5c34c52af0e044850576888ab09"
+cd jsmn
+git checkout 732d283ee9a2e5c34c52af0e044850576888ab09
+cd ..
+
 echo;
 #
 # ------------------------------------------------------------------------------------------------------------------------------------
