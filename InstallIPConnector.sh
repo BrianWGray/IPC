@@ -127,7 +127,21 @@ fi
 # Let's begin with UPDATE then UPGRADE
 # ------------------------------------------------------------------------------------------------------------------------------------
 # Install "pv" (Pipe View) to display progress of installs
+HL "Installing PV (Pipe Viewer) ..."
 apt-get install pv -y > /dev/null
+# Check for errors
+if [ $1 > 0 ]; then 
+	err " Error while installing PV "
+	err " Aborting "
+	ShowTime
+	echo;
+	echo;
+	exit 1
+else
+	HL "No errors during install of PV ... carrying on ..."
+fi
+#
+echo;
 #
 dir_base="/var"
 #
@@ -188,25 +202,6 @@ sysctl vm.swappiness=70
 cp -r /home/pi/IPC/zram.sh /etc/init.d/zram.sh
 chmod +x /etc/init.d/zram.sh
 update-rc.d zram.sh defaults
-#
-echo;
-#
-# ------------------------------------------------------------------------------------------------------------------------------------
-# Install PV for piped screen sparkles
-# ------------------------------------------------------------------------------------------------------------------------------------
-HL "Installing PV (Pipe Viewer) ..."
-sudo apt-get install pv > /dev/null
-# Check for errors
-if [ $1 > 0 ]; then 
-	err " Error while installing PV "
-	err " Aborting "
-	ShowTime
-	echo;
-	echo;
-	exit 1
-else
-	HL "No errors during install of PV ... carrying on ..."
-fi
 #
 echo;
 #
