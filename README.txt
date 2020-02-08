@@ -21,7 +21,7 @@ On your RPi:
 	sudo su
 	cd /home/pi/IPC
 	chmod +x InstallIPConnector.sh
-	./InstallIPConnectorV6.sh
+	./InstallIPConnector.sh
 
 # ======================================================================================
 NOTES:
