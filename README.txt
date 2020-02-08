@@ -1,7 +1,7 @@
 # ======================================================================================
 # SharkRF IP Connector installation script by VE3OY
-# Version 6 - 31DEC2018
-# Delete and and all previous versions!
+# Version *
+# Delete all previous versions!
 # ======================================================================================
 
 This is intended to be installed onto a Raspberry Pi 3, (1GB of RAM and quad core CPU).
@@ -20,7 +20,7 @@ On your RPi:
 - at a command prompt, type the following commands:
 	sudo su
 	cd /home/pi/IPC
-	chmod +x InstallIPConnectorV6.sh
+	chmod +x InstallIPConnector.sh
 	./InstallIPConnectorV6.sh
 
 # ======================================================================================
@@ -40,3 +40,6 @@ Good luck, and enjoy!
 Matt
 ve3oy [at] ve3oy [dot] com
 31DEC2018
+
+
+(Original content copied from https://github.com/VE3OY/srf-ip-conn-srv and modified)
