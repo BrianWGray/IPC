@@ -513,7 +513,7 @@ if [[ $start_web =~ ^(n|N)$ ]]; then
 	echo;
 	exit 0
 else
-	shutdown now
+	reboot
 fi
 #
 exit 0;
