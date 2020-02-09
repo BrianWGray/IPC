@@ -502,6 +502,8 @@ HL "Remember to REBOOT after editing that file!!"
 echo;
 HL "Write down this command, before it disappears from the screen!!"
 echo;
+HL "The web console will be available at http://127.0.0.1/dvr/"
+echo;
 infoNL "... but right now, we should REBOOT!"
 echo;
 #
